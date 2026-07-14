@@ -1,3 +1,9 @@
+"""Contains the core logic for the Snowman Meltdown game.
+
+Handles word selection, displaying game progress,
+and running the main game loop.
+"""
+
 import random
 from ascii_art import STAGES
 
@@ -7,12 +13,21 @@ WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
 
 def get_random_word():
-    """Selects a random word from the list."""
+    """Selects and returns a random word from the list 'WORDS'."""
     return random.choice(WORDS)
 
 
 def display_game_state(mistakes, secret_word, guessed_letters):
-    """Displays current game state."""
+    """Displays current game state/progress.
+
+    Shows the current snowman ASCII art stage and the secret word,
+    replacing unguessed letters with underscores.
+
+    Args:
+        mistakes (int): Number of incorrect guesses made so far.
+        secret_word (str): The word the player is trying to guess.
+        guessed_letters (list): Letters the player has already guessed.
+    """
     print(STAGES[mistakes])
 
     display_word = ""
@@ -27,6 +42,11 @@ def display_game_state(mistakes, secret_word, guessed_letters):
 
 
 def play_game():
+    """Run the Snowman Meltdown game.
+
+    Starts a new game, handles player guesses, tracks mistakes,
+    and displays whether the player saved the snowman or lost.
+    """
     secret_word = get_random_word()
     mistakes = 0
     guessed_letters = []

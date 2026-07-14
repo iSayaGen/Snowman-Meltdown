@@ -1,4 +1,5 @@
-# Snowman ASCII Art stages
+"""Contains ASCII art stages used in the Snowman Meltdown game."""
+
 STAGES = [
      # Stage 0: Full snowman
      """
