@@ -5,7 +5,7 @@ and running the main game loop.
 """
 
 import random
-from ascii_art import STAGES
+from ascii_art import STAGES, WIN_STAGE
 
 
 # List of secret words
@@ -76,6 +76,7 @@ def play_game():
             print("Correct!")
 
         if all(letter in guessed_letters for letter in secret_word):
+            print(WIN_STAGE)
             print("\nYou saved the snowman!")
             print("The word was: ", secret_word)
             return

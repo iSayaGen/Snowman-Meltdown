@@ -1,4 +1,4 @@
-"""Contains ASCII art stages used in the Snowman Meltdown game."""
+"""Contains ASCII art used in the Snowman Meltdown game."""
 
 STAGES = [
      # Stage 0: Full snowman
@@ -28,3 +28,11 @@ STAGES = [
      /___\\ 
      """
  ]
+
+WIN_STAGE = """
+      ___  
+     /___\\ 
+    \(^_^)/
+     ( : )
+     ( : ) 
+"""
