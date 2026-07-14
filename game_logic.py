@@ -37,7 +37,8 @@ def display_game_state(mistakes, secret_word, guessed_letters):
         else:
             display_word += "_ "
     print("Word:", display_word.strip())
-    print("Guessed letters:", guessed_letters)
+    print("Guessed letters:", ", ".join(guessed_letters))
+    print(f"Mistakes: {mistakes}/{len(STAGES) - 1}")
     print("\n")
 
 
